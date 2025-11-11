@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
   return (
@@ -18,9 +19,11 @@ const Contact = () => {
             <section>
               <h2 className="text-3xl font-serif text-[#3a3020] mb-6">Get In Touch</h2>
               <p className="text-[#5a4a38] leading-relaxed mb-8">
-                We welcome inquiries from students, scholars, institutions, and anyone interested
-                in learning about or supporting our mission to preserve and promote sacred
-                architectural traditions.
+                Join us in preserving and promoting the sacred science of Sthapathya Veda.
+	<p> •	Volunteer with our heritage projects.</p>
+	<p>•	Collaborate through academic and cultural partnerships.</p>
+	<p>•	Support artisans and research initiatives through donations.</p>
+
               </p>
 
               <div className="space-y-6">
@@ -60,6 +63,27 @@ const Contact = () => {
                     <h3 className="font-semibold text-[#3a3020] mb-1">Email</h3>
                     <p className="text-[#5a4a38]">info@sthapathyaveda.org</p>
                   </div>
+                  <div className="absolute right-6 bottom-10 flex flex-col gap-4 z-10">
+                          <a
+                            href="https://www.instagram.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 bg-[#4a3820] hover:bg-[#5a4830] text-white flex items-center justify-center rounded-full shadow-md transition-colors"
+                            aria-label="Instagram"
+                          >
+                            <FaInstagram size={20} />
+                          </a>
+                  
+                          <a
+                            href="https://wa.me/919876543210"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 bg-[#4a3820] hover:bg-[#5a4830] text-white flex items-center justify-center rounded-full shadow-md transition-colors"
+                            aria-label="WhatsApp"
+                          >
+                            <FaWhatsapp size={22} />
+                          </a>
+                        </div>
                 </div>
               </div>
             </section>

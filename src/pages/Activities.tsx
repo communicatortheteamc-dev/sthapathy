@@ -3,27 +3,27 @@ import { ArrowRight } from 'lucide-react';
 const activities = [
   {
     title: 'Workshops & Training Camps',
-    description: 'Conducting intensive workshops and training programs for architects, sculptors, and scholars in traditional temple architecture and Shilpa Shastra.',
+    description: 'Workshops & Training: Sculpture camps, architectural design courses, and temple site visits.',
     icon: '📚',
   },
   {
     title: 'Publications & Knowledge Sharing',
-    description: 'Publishing books, journals, research papers, and translations to share ancient wisdom with modern audiences.',
+    description: 'Publications: Authoritative texts on Vaastu, Mandala, temple architecture, and illustrated guides.',
     icon: '📖',
   },
   {
     title: 'Cultural Outreach & Heritage Walks',
-    description: 'Organizing heritage walks, temple tours, and cultural programs to educate communities about sacred architecture.',
+    description: 'Cultural Outreach: Heritage tours, exhibitions, and lectures to promote awareness of sacred art',
     icon: '🏛️',
   },
   {
     title: 'Social Service & Artisan Welfare',
-    description: 'Supporting traditional craftspeople and artisan communities through welfare programs and livelihood initiatives.',
+    description: 'Social Service: Scholarships, artisan welfare programs, and community empowerment. ',
     icon: '🤝',
   },
   {
     title: 'Temple Projects & Conservation',
-    description: 'Leading temple renovation projects and conservation efforts to preserve ancient monuments and sacred spaces.',
+    description: 'Temple Projects: Active participation in major Indian and international temple projects.Conservation Work: Documentation, restoration, and revival of heritage temples.',
     icon: '🕉️',
   },
   {

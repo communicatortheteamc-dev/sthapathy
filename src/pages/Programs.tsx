@@ -1,21 +1,21 @@
 const programs = [
   {
-    title: 'Student Programs – Internships, Temple Site Studies',
+    title: 'Student Internships in temple design and research.',
     description: 'Offer students internships and temple site studies to gain practical exposure in sacred architectural traditions. Students work directly with traditional Sthapathis and scholars on live projects.',
     image: 'https://images.pexels.com/photos/1007025/pexels-photo-1007025.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
-    title: 'Priest & Sculptor Training Programs',
+    title: 'Priest & Sculptor Training Camps rooted in Agama and Shilpa Shastra traditions.',
     description: 'Comprehensive training for temple priests and sculptors in Agamic traditions, ritualistic practices, and traditional stone carving techniques passed down through generations.',
     image: 'https://images.pexels.com/photos/3408354/pexels-photo-3408354.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
-    title: 'Research Fellowships',
+    title: 'Research Fellowships for scholars of Indian art, architecture, and Indology.',
     description: 'Providing research fellowships for scholars to conduct in-depth studies on Sthapathya Veda, temple architecture, and ancient construction methodologies.',
     image: 'https://images.pexels.com/photos/301703/pexels-photo-301703.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
-    title: 'Heritage Tours & Cultural Immersion',
+    title: 'Heritage Tours & Walks for devotees, researchers, and cultural enthusiasts.',
     description: 'Guided heritage tours and cultural immersion programs that offer participants direct experience of temple architecture, traditional craftsmanship, and sacred rituals.',
     image: 'https://images.pexels.com/photos/2739666/pexels-photo-2739666.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
@@ -54,9 +54,9 @@ const Programs = () => {
               <div className={`space-y-4 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
                 <h3 className="text-3xl font-serif text-[#3a3020]">{program.title}</h3>
                 <p className="text-[#5a4a38] leading-relaxed text-lg">{program.description}</p>
-                <button className="bg-[#4a3820] hover:bg-[#5a4830] text-white px-6 py-3 rounded-full uppercase text-sm tracking-wider transition-colors">
+                {/* <button className="bg-[#4a3820] hover:bg-[#5a4830] text-white px-6 py-3 rounded-full uppercase text-sm tracking-wider transition-colors">
                   Learn More
-                </button>
+                </button> */}
               </div>
             </div>
           ))}

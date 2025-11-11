@@ -27,28 +27,28 @@ const team = [
 
 const projects = [
   {
-    title: 'Renovation of Sri Ranganatha Temple',
-    location: 'Tamil Nadu, India',
-    description: 'Comprehensive restoration project preserving ancient architectural elements while ensuring structural integrity.',
-    status: 'Ongoing',
+    title: 'Statue of Equality – 216 ft. Sri Ramanujacharya Monument',
+    location: 'Telangana, India',
+    description: ' ',
+    status: ' ',
   },
   {
-    title: 'Documentation of Chola Dynasty Temples',
-    location: 'South India',
-    description: 'Creating detailed architectural documentation and digital archives of 11th-century temple complexes.',
-    status: 'Completed',
+    title: '108 Divya Desam Replicas, Shamshabad',
+    location: 'Telangana, India ',
+    description: ' ',
+    status: ' ',
   },
   {
-    title: 'International Training Program',
-    location: 'Global',
-    description: 'Collaborative program with universities worldwide to train architects and scholars in Vedic design principles.',
-    status: 'Ongoing',
+    title: 'Swarnagiri Sri Venkateswara Temple, Hyderabad',
+    location: ' Telangana, India',
+    description: ' ',
+    status: ' ',
   },
   {
-    title: 'Artisan Welfare Initiative',
-    location: 'Karnataka, India',
-    description: 'Supporting traditional craftspeople through skill development and livelihood programs.',
-    status: 'Ongoing',
+    title: 'Various conservation initiatives across India and international temple projects in USA, Australia, and New Zealand.',
+    location: 'Globally',
+    description: ' ',
+    status: ' ',
   },
 ];
 
@@ -59,8 +59,8 @@ const ProjectsTeam = () => {
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-serif text-center tracking-wide">Projects & Team</h1>
           <p className="text-center text-[#d5c8b5] mt-4 text-lg max-w-4xl mx-auto">
-            Meet our dedicated team of scholars, architects, and craftspeople working to preserve
-            and promote sacred architectural traditions.
+            The trust is led by a panel of traditional Sthapathis, cultural experts, and spiritual advisors. Their combined expertise ensures authenticity, innovation, and devotion in every project undertaken.
+
           </p>
         </div>
       </div>
@@ -92,7 +92,7 @@ const ProjectsTeam = () => {
 
           <section>
             <h2 className="text-4xl font-serif text-[#3a3020] mb-12 text-center">
-              Current Projects
+                Projects
             </h2>
             <div className="space-y-6">
               {projects.map((project, index) => (
@@ -110,7 +110,7 @@ const ProjectsTeam = () => {
                       </p>
                       <p className="text-[#5a4a38] leading-relaxed">{project.description}</p>
                     </div>
-                    <span
+                    {/* <span
                       className={`px-4 py-2 rounded-full text-sm font-semibold ${
                         project.status === 'Ongoing'
                           ? 'bg-[#4a88b3] text-white'
@@ -118,7 +118,7 @@ const ProjectsTeam = () => {
                       }`}
                     >
                       {project.status}
-                    </span>
+                    </span> */}
                   </div>
                 </div>
               ))}

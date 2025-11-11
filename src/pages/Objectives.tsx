@@ -2,32 +2,32 @@ import { ArrowRight } from 'lucide-react';
 
 const objectives = [
   {
-    title: 'Research & Revive Sthapathya Veda and Agamas',
-    description: 'Conduct deep studies to preserve, interpret, and revive ancient temple architecture and Agamic traditions for modern relevance.',
+    title: ' Revive and research the principles of Sthapathya Veda and Agamas.',
+    description: ' ',
   },
   {
-    title: 'Train Architects, Sculptors, and Scholars',
-    description: 'Provide comprehensive education in traditional design principles and craftsmanship.',
+    title: 'Train architects, sculptors, and scholars in traditional systems of design and construction.',
+    description: ' ',
   },
   {
-    title: 'Publish Books, Journals, and Translations',
-    description: 'Share knowledge through scholarly publications and accessible resources.',
+    title: 'Publish books, journals, and translations to make Vedic knowledge accessible globally.',
+    description: ' ',
   },
   {
-    title: 'Collaborate with Universities and Temples Worldwide',
-    description: 'Build global partnerships to promote and preserve sacred architecture.',
+    title: 'Collaborate with universities, temples, and cultural organizations in India and abroad.',
+    description: ' ',
   },
   {
-    title: 'Protect and Renovate Ancient Temples and Monuments',
-    description: 'Lead conservation efforts to safeguard cultural heritage.',
+    title: 'Protect and renovate ancient temples and monuments.',
+    description: ' ',
   },
   {
-    title: 'Conduct Seminars, Exhibitions, and Awareness Programs',
-    description: 'Engage communities through educational initiatives and cultural events.',
+    title: 'Conduct seminars, exhibitions, and awareness programs on heritage and sculpture.',
+    description: ' ',
   },
   {
-    title: 'Empower Artisans and Promote Livelihoods',
-    description: 'Support traditional craftspeople and ensure sustainable practices.',
+    title: 'Empower artisans and promote sustainable livelihoods through skill development.',
+    description: ' ',
   },
 ];
 
@@ -48,17 +48,17 @@ const Objectives = () => {
           {objectives.map((objective, index) => (
             <div
               key={index}
-              className="bg-[#6a5a48]/30 p-8 rounded-lg hover:bg-[#6a5a48]/50 transition-colors group cursor-pointer border border-[#8a7a60]"
+              className="bg-[#6a5a48]/30 p-8 rounded-lg hover:bg-[#6a5a48]/50 transition-colors group  border border-[#8a7a60]"
             >
               <div className="flex items-start justify-between gap-6">
                 <div className="flex-1">
                   <h3 className="text-2xl font-serif text-white mb-3">{objective.title}</h3>
                   <p className="text-[#d5c8b5] leading-relaxed">{objective.description}</p>
                 </div>
-                <ArrowRight
+                {/* <ArrowRight
                   className="text-[#d5c8b5] flex-shrink-0 group-hover:translate-x-2 transition-transform mt-2"
                   size={28}
-                />
+                /> */}
               </div>
             </div>
           ))}

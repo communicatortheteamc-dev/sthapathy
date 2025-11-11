@@ -49,10 +49,13 @@ const Publications = () => {
       <div className="bg-[#3a2810] text-white py-16 border-b-4 border-[#4a88b3]">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-serif text-center tracking-wide">Publications & Resources</h1>
-          <p className="text-center text-[#d5c8b5] mt-4 text-lg max-w-4xl mx-auto">
-            SVRF shares knowledge through books on Vaastu and temple design, monthly journals,
-            research papers, translations, and online archives, ensuring sacred wisdom remains
-            accessible for global learners.
+          <p className="text-center text-[#d5c8b5] mt-4 text-lg max-w-4xl mx-auto   ">
+           <p> SVRF is committed to knowledge sharing through:</p>
+               <p> •	Research publications and coffee-table books.</p>
+	             <p> •	Translations of ancient Agama texts.</p>
+	             <p>•	The monthly journal “Sthapathya Veda”.</p>
+	             <p> •	Temple photo archives, site maps, and architectural drawings.</p>
+
           </p>
         </div>
       </div>
