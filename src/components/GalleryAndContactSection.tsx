@@ -59,7 +59,13 @@ export default function GalleryAndContactSection() {
         <div
           key={i}
           className="relative w-32 h-44 sm:w-40 sm:h-56 md:w-48 md:h-64 bg-[#a89d82]/80 rounded-2xl shadow-lg border border-[#9c9077]"
-        ></div>
+        >
+          <img
+      src="/swarnagiri-img.jpeg"
+      alt="Background Vector"
+      className="w-full h-full rounded-2xl object-cover opacity-70"
+    /> 
+        </div>
       ))}
     </div>
 

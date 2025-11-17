@@ -1,46 +1,46 @@
 const galleryImages = [
   {
-    url: 'https://images.pexels.com/photos/3408354/pexels-photo-3408354.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'architecture-img1.webp',
     title: 'Temple Architecture',
     category: 'Architecture',
   },
   {
-    url: 'https://images.pexels.com/photos/1007025/pexels-photo-1007025.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'stone-img.jpg',
     title: 'Stone Sculpture',
     category: 'Sculpture',
   },
   {
-    url: 'https://images.pexels.com/photos/2739666/pexels-photo-2739666.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'Temple-Complex.jpg',
     title: 'Temple Complex',
     category: 'Architecture',
   },
   {
-    url: 'https://images.pexels.com/photos/301703/pexels-photo-301703.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'Heritage-Site.jpeg',
     title: 'Heritage Site',
     category: 'Heritage',
   },
   {
-    url: 'https://images.pexels.com/photos/2166711/pexels-photo-2166711.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'Traditional-Craftsmanship.jpeg',
     title: 'Traditional Craftsmanship',
     category: 'Sculpture',
   },
   {
-    url: 'https://images.pexels.com/photos/1007024/pexels-photo-1007024.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: ' Ancient-Monument.webp',
     title: 'Ancient Monument',
     category: 'Heritage',
   },
   {
-    url: 'https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'Sacred-Architecture.jpg',
     title: 'Sacred Architecture',
     category: 'Architecture',
   },
   {
-    url: 'https://images.pexels.com/photos/3844796/pexels-photo-3844796.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'Temple-Details.jpg',
     title: 'Temple Details',
     category: 'Architecture',
   },
   {
-    url: 'https://images.pexels.com/photos/1007026/pexels-photo-1007026.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'Cultural-Heritage.webp',
     title: 'Cultural Heritage',
     category: 'Heritage',
   },

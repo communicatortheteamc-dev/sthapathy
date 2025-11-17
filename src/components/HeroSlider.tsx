@@ -8,21 +8,21 @@ const slides = [
     subtitle: "Tradition in Stone",
     description:
       "The Sthapathya Veda Research Foundation (SVRF) is dedicated to preserving and reviving the timeless wisdom of Vedic architecture.",
-    image: "/home-bg.jpg", // Replace with your image path
+    image: "/hero-img.jpg", // Replace with your image path
   },
   {
     title: "Ancient Wisdom.",
     subtitle: "Modern Relevance",
     description:
       "Bridging tradition and modernity, ensuring sacred design principles inspire future generations.",
-    image: "/home-bg.jpg",
+    image: "/hero-img4.jpg",
   },
   {
     title: "Sacred Architecture.",
     subtitle: "Cultural Heritage",
     description:
       "Conducting research, education, and practice in the field of Indian temple architecture.",
-    image: "/home-bg.jpg",
+    image: "/about-us.jpg",
   },
 ];
 
@@ -59,8 +59,8 @@ const HeroSlider = () => {
       </div>
 
       {/* Overlay for soft tint */}
-      <div className="absolute inset-0 bg-[#b7a678]/70"></div>
-
+      <div className="absolute inset-0 bg-[#b7a678]/30"></div>     
+ {/*   */}
       {/* Text content */}
       <div className="relative z-10 text-center text-[#3a3020] px-4">
         <h3 className="text-2xl md:text-3xl font-serif uppercase tracking-wide text-[#ffffff] mb-3">

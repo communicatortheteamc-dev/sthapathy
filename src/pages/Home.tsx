@@ -13,10 +13,10 @@ const mic_transparentIcon = "/icons/mic_transparent.png";
 const pray_transparentIcon = "/icons/pray_transparent.png";
 const scroll_transparentIcon = "/icons/scroll_transparent.png";
 const activities = [
-  { title: "Workshops & Training Camps" },
-  { title: "Publications & Knowledge Sharing" },
-  { title: "Cultural Outreach & Heritage Walks" },
-  { title: "Social Service & Artisan Welfare" },
+  { title: "Workshops & Training Camps",  image: "/activities-img1.jpg", },
+  { title: "Publications & Knowledge Sharing" ,  image: "/activities-img2.jpg",},
+  { title: "Cultural Outreach & Heritage Walks" ,  image: "/activities-img3.jpeg",},
+  { title: "Social Service & Artisan Welfare" ,  image: "/activities-img4.jpg",},
 ];
 
 const Home = () => {
@@ -116,7 +116,7 @@ const Home = () => {
               <div className="w-[280px] sm:w-[350px] md:w-[450px] h-64 sm:h-80 md:h-96 bg-[#d5c8b5] rounded-t-full flex items-center justify-center relative shadow-md">
                 {/* Main image inside the arch */}
                 <img
-                  src="/main-inside-arch.png"
+                  src="/hero-img3.jpg"
                   alt=""
                   className="w-full h-full object-cover rounded-md shadow-lg rounded-t-full"
                 />
@@ -156,7 +156,7 @@ const Home = () => {
               <div className="w-[260px] sm:w-[320px] md:w-[400px] h-[400px] sm:h-[500px] md:h-[600px] bg-[#d5c8b5] rounded-t-full flex items-center justify-center relative shadow-md">
                 {/* Main image inside the arch */}
                 <img
-                  src="/main-inside-arch.png"
+                  src="/objective-img.jpg"
                   alt=""
                   className="w-full h-full object-cover rounded-md shadow-lg rounded-t-full"
                 />
@@ -234,7 +234,13 @@ const Home = () => {
                 className={`relative w-60 h-80 rounded-2xl bg-[#bcae94]/60 backdrop-blur-md border border-[#9d8c73] shadow-[0_4px_10px_rgba(0,0,0,0.2)] flex flex-col justify-end p-6 transition-all duration-300 ${i === 0 ? "border-2 border-[#f5f0e6]" : ""
                   }`}
               >
-                <div className="absolute inset-0 rounded-2xl bg-[#b8a782]/30" />
+                  <div className="absolute inset-0 rounded-2xl bg-[#b8a782]/30">
+        <img
+          src= {item.image}
+          alt="Top Border"
+          className="w-full h-full object-cover"
+        />
+      </div>
                 <div className="relative z-10 flex  items-center">
                   <h3 className="text-[#f5f0e6] text-sm font-medium leading-snug mb-3 uppercase tracking-wide">
                     {item.title}
@@ -334,22 +340,33 @@ const Home = () => {
             {/* Left Illustration / Shape */}
             <div className="relative flex justify-center md:justify-start">
               {/* Arched background shape */}
-              <div className="w-[270px] sm:w-[350px] md:w-[470px] h-[250px] sm:h-[320px] md:h-[420px] bg-[#9D9276] rounded-lg"></div>
+              <div className="w-[270px] sm:w-[350px] md:w-[470px] h-[250px] sm:h-[320px] md:h-[420px] bg-[#9D9276] rounded-lg">
+<img
+          src="publication-img1.jpg"
+          alt="Top Border"
+          className="w-full h-full object-cover"
+        />
+
+              </div>
             </div>
 
             {/* Right Publication List */}
             <div className="space-y-6">
               <PublicationCard
+                img='publication-img2.jpg'
                 title='Monthly Journal "Sthapathya Veda"'
                 author="By Sthapathya Veda"
                 date="24.09.2025"
               />
               <PublicationCard
+               img='publication-img3.jpg'
                 title="Research Papers and Translations"
                 author="By Sthapathya Veda"
                 date="24.09.2025"
+
               />
               <PublicationCard
+              img='publication-img4.jpg'
                 title="Online Resources: Temple Drawings, Archives"
                 author="By Sthapathya Veda"
                 date="24.09.2025"
@@ -385,9 +402,15 @@ const ActivityCard = ({ title, icon }: { title: string; icon: string }) => (
   </div>
 );
 
-const PublicationCard = ({ title, author, date }: { title: string; author: string; date: string }) => (
+const PublicationCard = ({ title, author, date, img }: { title: string; author: string; date: string; img:string }) => (
   <div className="bg-[#9a8a70] p-6 rounded-lg flex gap-4 items-center hover:bg-[#8a7a60] transition-colors cursor-pointer">
-    <div className="w-20 h-20 bg-[#6a5a48] rounded flex-shrink-0"></div>
+    <div className="w-20 h-20 bg-[#6a5a48] rounded flex-shrink-0">
+      <img
+          src={img}
+          alt="Top Border"
+          className="w-full h-full object-cover"
+        />
+    </div>
     <div>
       <h4 className="font-serif text-lg mb-2">{title}</h4>
       <p className="text-[#d5c8b5] text-sm">{author}</p>
