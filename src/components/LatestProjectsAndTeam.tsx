@@ -3,60 +3,43 @@ import { motion } from "framer-motion";
 
 export default function LatestProjectsAndTeam() {
   const teamMembers = [
-    {
-      id: 1,
-      name: "Sri Chinna Jeeyar Swamiji",
-      role: "Founder & Spiritual Leader",
-      image: "/team-img1.png",
-    },
+    // {
+    //   id: 1,
+    //   name: "Sri D.N.V. Prasad Sthapathy",
+    //   role: "Founder & Spiritual Leader",
+    //   image: "/team-img1.png",
+    // },
     {
       id: 2,
-      name: "Sri Tridandi Srimannarayana Ramanuja Swamiji",
-      role: "Chief Advisor",
-      image: "/team-img2.png",
+      name: "Gandeti Siva Krishna",
+      role: "Deputy sthapathy",
+      image: "/SivaKrishna.jpeg",
     },
     {
       id: 3,
-      name: "Sri Ahobila Ramanuja Jeeyar Swamiji",
-      role: "Cultural Director",
-      image: "/team-img3.jpg",
+      name: "Uppalapati Purushottam Reddy",
+      role: "Deputy sthapathy",
+      image: "/purushotam.jpeg",
     },
     {
       id: 4,
-      name: "Sri Varaha Lakshmi Narasimha Swamiji",
-      role: "Project Coordinator",
-      image: "/team4.jpg",
+      name: "Kotha Raghavendra ",
+      role: " Assistant sthapathy",
+      image: "/team-img2.png",
     },
     {
       id: 5,
-      name: "Smt. Sridevi Ranganathan",
-      role: "Design Consultant",
-      image: "/team5.jpg",
+      name: "Thayuru Dhana Shekar",
+      role: "Assistant sthapathy",
+      image: "/Dhanasekhar.jpeg",
     },
     {
       id: 6,
-      name: "Sri Venkat Ramana",
-      role: "Architectural Advisor",
-      image: "/team6.jpg",
+      name: "U K.Vishnu",
+      role: "Advisor",
+      image: "/team-img1.png",
     },
-    {
-      id: 7,
-      name: "Smt. Anuradha Reddy",
-      role: "Cultural Researcher",
-      image: "/team7.jpg",
-    },
-    {
-      id: 8,
-      name: "Sri Nageshwar Rao",
-      role: "Heritage Documentation Head",
-      image: "/team8.jpg",
-    },
-    {
-      id: 9,
-      name: "Sri Suryanarayana",
-      role: "Temple Project Coordinator",
-      image: "/team9.jpg",
-    },
+    
   ];
 
   return (
@@ -168,11 +151,11 @@ export default function LatestProjectsAndTeam() {
             </div>
           </div>
 
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <button className="px-6 py-2 bg-[#463f2f] text-[#f5f0e6] rounded-full text-sm tracking-wide">
               VIEW ALL PROJECTS
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -207,13 +190,15 @@ export default function LatestProjectsAndTeam() {
 
           <div className="flex flex-wrap justify-center gap-8">
             {teamMembers.map((team, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <div className="relative w-40 h-40 flex items-center justify-center mb-3">
-                  <img src="/ourgroup.png" alt="Frame" className="absolute inset-0 w-full h-full object-contain" />
-                  <img src={team.image} alt="" className="relative w-28 h-28 rounded-full object-cover border-2 border-[#f5f0e6] shadow-md" />
+              <div key={index} className="flex flex-col items-center gap-4">
+                <div className="relative w-[220px] h-[220px] flex items-center justify-center mb-3">
+                  <img src="/ourgroup.png" alt="Frame" className="absolute inset-0 w-65 h-75 object-contain" />
+                  <img src={team.image} alt="" className="relative w-[140px] h-[140px]  rounded-full object-cover border-2 border-[#f5f0e6] shadow-md mt-5" />
                 </div>
+                <div>
                 <p className="text-[#463f2f] font-medium text-sm">{team.name}</p>
                 <p className="text-[#7a6a53] text-xs">{team.role}</p>
+                </div>
               </div>
             ))}
           </div>

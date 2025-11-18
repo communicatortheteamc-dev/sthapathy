@@ -1,6 +1,31 @@
 import { ArrowRight } from "lucide-react";
-
+import { useState } from "react";
+const tabs = [
+  {
+    title: "TEMPLE PROJECTS IN PROGRESS",
+    images: ["/swarnagiri-img.jpeg", "/stone-img.jpg", "/projects3.jpg", "/Temple-Complex.jpg"],
+    place:"hyderabad",
+  },
+  {
+    title: "SCULPTURAL WORKSHOPS",
+    images: ["/stone-img.jpg", "/projects3.jpg", "/Temple-Complex.jpg"],
+  },
+  {
+    title: "HERITAGE CONSERVATION EFFORTS",
+    images: ["/stone-img.jpg", "/Temple-Complex.jpg"],
+  },
+  {
+    title: "EVENTS & TRAINING PROGRAMS",
+    images: ["/stone-img.jpg", "/projects3.jpg", ],
+  },
+  {
+    title: "ARTICLES",
+    images: ["/article1.jpg", "/article2.jpg", "/article3.jpg"],
+  },
+];
 export default function GalleryAndContactSection() {
+    const [activeTab, setActiveTab] = useState(0);
+
   return (
     <div className="w-full">
       {/* -------------------- GALLERY SECTION -------------------- */}
@@ -25,56 +50,51 @@ export default function GalleryAndContactSection() {
       accessible for global learners.
     </p>
 
-    {/* Gallery Tabs */}
-    <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-10 mb-10 md:mb-12 text-[#f5f0e6] font-medium">
-      <a
-        href="#"
-        className="text-[#b1a27e] underline underline-offset-4 text-xs sm:text-sm md:text-base"
-      >
-        TEMPLE PROJECTS IN PROGRESS
-      </a>
-      <a
-        href="#"
-        className="hover:text-[#b1a27e] text-xs sm:text-sm md:text-base"
-      >
-        SCULPTURAL WORKSHOPS
-      </a>
-      <a
-        href="#"
-        className="hover:text-[#b1a27e] text-xs sm:text-sm md:text-base"
-      >
-        HERITAGE CONSERVATION EFFORTS
-      </a>
-      <a
-        href="#"
-        className="hover:text-[#b1a27e] text-xs sm:text-sm md:text-base"
-      >
-        EVENTS & TRAINING PROGRAMS
-      </a>
-    </div>
+     
+    <div>
+      {/* Tabs */}
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-10 mb-10 md:mb-12 text-[#f5f0e6] font-medium">
+        {tabs.map((tab, i) => (
+          <button
+            key={i}
+            onClick={() => setActiveTab(i)}
+            className={
+              "text-xs sm:text-sm md:text-base transition-all " +
+              (activeTab === i
+                ? "text-[#b1a27e] underline underline-offset-4"
+                : "hover:text-[#b1a27e]")
+            }
+          >
+            {tab.title}
+          </button>
+        ))}
+      </div>
 
-    {/* Gallery Cards */}
-    <div className="flex flex-wrap justify-center gap-4 sm:gap-6 items-center">
-      {[1, 2, 3, 4, 5].map((_, i) => (
-        <div
-          key={i}
-          className="relative w-32 h-44 sm:w-40 sm:h-56 md:w-48 md:h-64 bg-[#a89d82]/80 rounded-2xl shadow-lg border border-[#9c9077]"
-        >
-          <img
-      src="/swarnagiri-img.jpeg"
-      alt="Background Vector"
-      className="w-full h-full rounded-2xl object-cover opacity-70"
-    /> 
-        </div>
-      ))}
+      {/* Images for Active Tab */}
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-6 items-center">
+        {tabs[activeTab].images.map((img, i) => (
+          <div
+            key={i}
+            className="relative w-32 h-44 sm:w-40 sm:h-56 md:w-48 md:h-64 bg-[#a89d82]/80 rounded-2xl shadow-lg border border-[#9c9077]"
+          >
+            <img
+              src={img}
+              alt=""
+              className="w-full h-full rounded-2xl object-cover opacity-70"
+            />
+            
+          </div>
+        ))}
+      </div>
     </div>
+    
 
-    {/* Pagination Dots */}
+    {/* Pagination Dots
     <div className="flex justify-center gap-2 mt-6">
       <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-white rounded-full"></div>
       <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#8b7c5f] rounded-full"></div>
       <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#8b7c5f] rounded-full"></div>
-    </div>
+    </div> */}
   </div>
 </section>
 
