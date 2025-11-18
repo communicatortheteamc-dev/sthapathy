@@ -253,11 +253,11 @@ const Home = () => {
             ))}
           </div>
 
-          <div className="flex justify-center mt-12 gap-2">
+          {/* <div className="flex justify-center mt-12 gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-[#f5f0e6]" />
             <span className="w-2.5 h-2.5 rounded-full bg-[#a39278]" />
             <span className="w-2.5 h-2.5 rounded-full bg-[#a39278]" />
-          </div>
+          </div> */}
         </div>
       </section>
 
