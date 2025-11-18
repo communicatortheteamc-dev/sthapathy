@@ -91,10 +91,9 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-serif mb-4">Contact Info</h3>
             <ul className="space-y-2 text-sm text-[#d5c8b5]">
-              <li>Chennai, Tamil Nadu</li>
-              <li>India</li>
-              <li>info@sthapathyaveda.org</li>
-              <li>+91 44 1234 5678</li>
+              #Villa - 74, Ramky GG Villas,
+                Srinagar Vi. Maheswaram Mandal
+                RR Dt. Telangana - 501359
             </ul>
           </div>
         </div>

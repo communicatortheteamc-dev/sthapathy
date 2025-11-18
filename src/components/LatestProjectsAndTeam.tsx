@@ -25,7 +25,7 @@ export default function LatestProjectsAndTeam() {
       id: 4,
       name: "Kotha Raghavendra ",
       role: " Assistant sthapathy",
-      image: "/team-img2.png",
+      image: "",
     },
     {
       id: 5,
@@ -37,7 +37,7 @@ export default function LatestProjectsAndTeam() {
       id: 6,
       name: "U K.Vishnu",
       role: "Advisor",
-      image: "/team-img1.png",
+      image: "",
     },
     
   ];

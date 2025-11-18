@@ -20,9 +20,9 @@ const Contact = () => {
               <h2 className="text-3xl font-serif text-[#3a3020] mb-6">Get In Touch</h2>
               <p className="text-[#5a4a38] leading-relaxed mb-8">
                 Join us in preserving and promoting the sacred science of Sthapathya Veda.
-	<p> •	Volunteer with our heritage projects.</p>
-	<p>•	Collaborate through academic and cultural partnerships.</p>
-	<p>•	Support artisans and research initiatives through donations.</p>
+                <p> •	Volunteer with our heritage projects.</p>
+                <p>•	Collaborate through academic and cultural partnerships.</p>
+                <p>•	Support artisans and research initiatives through donations.</p>
 
               </p>
 
@@ -34,13 +34,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-[#3a3020] mb-1">Address</h3>
                     <p className="text-[#5a4a38]">
-                      Sthapathya Veda Research Foundation
-                      <br />
-                      123 Temple Street
-                      <br />
-                      Chennai, Tamil Nadu 600001
-                      <br />
-                      India
+                      #Villa - 74, Ramky GG Villas,
+                      Srinagar Vi. Maheswaram Mandal
+                      RR Dt. Telangana - 501359
+
                     </p>
                   </div>
                 </div>
@@ -51,7 +48,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#3a3020] mb-1">Phone</h3>
-                    <p className="text-[#5a4a38]">+91 44 1234 5678</p>
+                    <p className="text-[#5a4a38]">+91 9440525788</p>
                   </div>
                 </div>
 
@@ -61,29 +58,29 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#3a3020] mb-1">Email</h3>
-                    <p className="text-[#5a4a38]">info@sthapathyaveda.org</p>
+                    <p className="text-[#5a4a38]">Purvavedic@gmail.com</p>
                   </div>
                   <div className="absolute right-6 bottom-10 flex flex-col gap-4 z-10">
-                          <a
-                            href="https://www.instagram.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-10 h-10 bg-[#4a3820] hover:bg-[#5a4830] text-white flex items-center justify-center rounded-full shadow-md transition-colors"
-                            aria-label="Instagram"
-                          >
-                            <FaInstagram size={20} />
-                          </a>
-                  
-                          <a
-                            href="https://wa.me/919876543210"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-10 h-10 bg-[#4a3820] hover:bg-[#5a4830] text-white flex items-center justify-center rounded-full shadow-md transition-colors"
-                            aria-label="WhatsApp"
-                          >
-                            <FaWhatsapp size={22} />
-                          </a>
-                        </div>
+                    <a
+                      href="https://www.instagram.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-[#4a3820] hover:bg-[#5a4830] text-white flex items-center justify-center rounded-full shadow-md transition-colors"
+                      aria-label="Instagram"
+                    >
+                      <FaInstagram size={20} />
+                    </a>
+
+                    <a
+                      href="https://wa.me/919876543210"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-[#4a3820] hover:bg-[#5a4830] text-white flex items-center justify-center rounded-full shadow-md transition-colors"
+                      aria-label="WhatsApp"
+                    >
+                      <FaWhatsapp size={22} />
+                    </a>
+                  </div>
                 </div>
               </div>
             </section>
