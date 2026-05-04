@@ -2,40 +2,45 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { X } from "lucide-react";
 
-// Elegant Celebration Confetti (falling from top to bottom)
-const ElegantConfetti = () => {
-  const pieces = Array.from({ length: 50 });
-  // Using the site's elegant color palette for the confetti
-  const colors = ["#d4af37", "#b8952a", "#4a88b3", "#494433"];
+
+// Showering Flowers Animation (falling from top to bottom)
+const ShoweringFlowers = () => {
+  const flowers = ["🌸"];
+  const pieces = Array.from({ length: 15 }); // Reduced count
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none z-50">
-      {pieces.map((_, i) => (
-        <motion.div
-          key={i}
-          className={`absolute ${i % 3 === 0 ? "w-2 h-6" : i % 2 === 0 ? "w-3 h-3 rounded-full" : "w-2 h-2"
-            }`}
-          style={{ backgroundColor: colors[i % colors.length] }}
-          initial={{
-            opacity: 0,
-            y: -50,
-            x: `${Math.random() * 100}%`,
-            rotate: Math.random() * 360,
-          }}
-          animate={{
-            opacity: [0, 1, 1, 0],
-            y: ["0%", "100%"],
-            x: `calc(${Math.random() * 100}% + ${Math.random() * 200 - 100}px)`,
-            rotate: Math.random() * 720,
-          }}
-          transition={{
-            duration: 3 + Math.random() * 4,
-            repeat: Infinity,
-            delay: Math.random() * 3,
-            ease: "linear",
-          }}
-        />
-      ))}
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-[55] w-full h-full">
+      {pieces.map((_, i) => {
+        // Spread the flowers across the entire 100% width of the container
+        const startX = Math.random() * 100;
+
+        return (
+          <motion.div
+            key={i}
+            className="absolute text-lg md:text-xl drop-shadow-sm" // Reduced size
+            style={{ top: "-10%", left: `${startX}%` }} // Start above the container
+            initial={{
+              y: 0,
+              opacity: 0,
+              rotate: Math.random() * 180,
+            }}
+            animate={{
+              y: ["0%", "1500%"], // Fall straight down far below the container
+              x: [0, Math.random() * 40 - 20, 0], // Gentle side-to-side sway
+              opacity: [0, 1, 1, 0],
+              rotate: Math.random() * 720,
+            }}
+            transition={{
+              duration: 5 + Math.random() * 3, // Smooth falling speed
+              repeat: Infinity,
+              delay: Math.random() * 5,
+              ease: "linear",
+            }}
+          >
+            {flowers[i % flowers.length]}
+          </motion.div>
+        );
+      })}
     </div>
   );
 };
@@ -122,7 +127,8 @@ const BirthdayPopup = () => {
             className="relative w-full max-w-4xl bg-[#faf9f6] rounded-sm shadow-2xl flex flex-col md:flex-row border border-[#e5e2d9]"
           >
             {/* Celebration Animations inside the card */}
-            <ElegantConfetti />
+            {/* <ElegantConfetti /> */}
+            <ShoweringFlowers />
             <ElegantBalloons />
 
             {/* Close Button */}
@@ -155,7 +161,7 @@ const BirthdayPopup = () => {
                   }}
                   src="/sriphoto.png"
                   alt="Birthday Celebration"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover relative z-10"
                 />
               </motion.div>
             </div>
@@ -207,7 +213,7 @@ const BirthdayPopup = () => {
                   contributions to our journey.
                 </motion.p>
 
-                <motion.button
+                {/* <motion.button
                   variants={fadeUpVariant}
                   whileHover={{
                     scale: 1.05,
@@ -219,7 +225,7 @@ const BirthdayPopup = () => {
                   className="px-8 py-3 border border-[#494433] text-[#494433] transition-colors duration-300 font-serif tracking-widest text-sm uppercase relative z-20 bg-[#faf9f6]/50 backdrop-blur-sm"
                 >
                   Enter Site
-                </motion.button>
+                </motion.button> */}
               </motion.div>
             </div>
           </motion.div>
