@@ -107,14 +107,14 @@ const BirthdayPopup = () => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 md:p-12 overflow-hidden">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4 md:p-12 overflow-hidden">
           {/* Subtle elegant backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="absolute inset-0 bg-[#494433]/70 backdrop-blur-sm"
+            className="absolute inset-0 bg-[#494433]/80 backdrop-blur-sm"
             onClick={() => setIsOpen(false)}
           />
 
@@ -124,32 +124,31 @@ const BirthdayPopup = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative w-full max-w-4xl bg-[#faf9f6] rounded-sm shadow-2xl flex flex-col md:flex-row border border-[#e5e2d9]"
+            className="relative w-full max-w-4xl max-h-[95vh] md:max-h-[90vh] bg-[#faf9f6] rounded-sm shadow-2xl flex flex-col md:flex-row border border-[#e5e2d9] overflow-y-auto md:overflow-hidden"
           >
             {/* Celebration Animations inside the card */}
-            {/* <ElegantConfetti /> */}
             <ShoweringFlowers />
             <ElegantBalloons />
 
-            {/* Close Button */}
+            {/* Close Button - Enhanced visibility for mobile */}
             <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
               onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 z-[60] p-2 text-[#494433]/60 hover:bg-[#494433]/10 hover:text-[#494433] rounded-full transition-colors"
+              className="absolute top-2 right-2 md:top-4 md:right-4 z-[70] p-1.5 md:p-2 text-white md:text-[#494433]/60 hover:bg-[#494433]/10 hover:text-[#494433] rounded-full transition-colors bg-[#494433]/40 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none"
               aria-label="Close"
             >
-              <X size={24} strokeWidth={1.5} />
+              <X size={20} className="md:w-6 md:h-6" strokeWidth={1.5} />
             </motion.button>
 
             {/* Left Image Section - Deep Background with Arched Frame */}
-            <div className="w-full md:w-5/12 bg-[#494433] p-8 md:p-12 flex items-center justify-center relative overflow-hidden z-10">
+            <div className="w-full md:w-5/12 bg-[#494433] p-6 sm:p-8 md:p-12 flex items-center justify-center relative overflow-hidden z-10 border-b md:border-b-0 md:border-r border-[#e5e2d9]/10">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-                className="relative w-full max-w-[280px] aspect-[3/4] rounded-t-full overflow-hidden shadow-2xl z-20"
+                className="relative w-full max-w-[200px] sm:max-w-[280px] aspect-[3/4] rounded-t-full overflow-hidden shadow-2xl z-20 border-2 border-[#d4af37]/30"
               >
                 {/* Continuous subtle breathing effect on the image */}
                 <motion.img
@@ -167,31 +166,31 @@ const BirthdayPopup = () => {
             </div>
 
             {/* Right Content Section - Clean & Elegant Typography */}
-            <div className="w-full md:w-7/12 p-8 md:p-16 flex flex-col justify-center items-center text-center bg-[#faf9f6] relative z-10">
+            <div className="w-full md:w-7/12 p-6 sm:p-10 md:p-16 flex flex-col justify-center items-center text-center bg-[#faf9f6] relative z-10">
               <motion.div
                 variants={staggerContainer}
                 initial="hidden"
                 animate="show"
-                className="flex flex-col items-center"
+                className="flex flex-col items-center w-full"
               >
                 <motion.div
                   variants={fadeUpVariant}
-                  className="text-[#4a88b3] text-sm uppercase tracking-[0.2em] font-medium mb-4"
+                  className="text-[#4a88b3] text-[10px] sm:text-xs md:text-sm uppercase tracking-[0.3em] font-semibold mb-2 sm:mb-4"
                 >
                   A Special Day
                 </motion.div>
 
                 <motion.h1
                   variants={fadeUpVariant}
-                  className="text-4xl md:text-4xl font-serif text-[#494433] mb-2 leading-tight relative"
+                  className="text-2xl sm:text-3xl md:text-4xl font-serif text-[#494433] mb-1 sm:mb-2 leading-tight relative"
                 >
                   Wishing You a <br />
-                  <span className=" ">Happy Birthday</span>
+                  <span className="text-[#4a88b3]">Happy Birthday</span>
                 </motion.h1>
 
                 <motion.h2
                   variants={fadeUpVariant}
-                  className="text-3xl md:text-4xl font-serif font-bold text-[#4a88b3] tracking-wide mb-6 relative"
+                  className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-[#494433] tracking-wide mb-4 sm:mb-8 relative mt-1 md:mt-2"
                 >
                   Sri D.N.V. Prasad Sthapathy
                 </motion.h2>
@@ -199,33 +198,18 @@ const BirthdayPopup = () => {
                 {/* Animated separator line */}
                 <motion.div
                   initial={{ width: 0, opacity: 0 }}
-                  animate={{ width: 48, opacity: 1 }}
+                  animate={{ width: "3rem", opacity: 1 }}
                   transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
-                  className="h-[1px] bg-[#494433]/30 mx-auto mb-8"
+                  className="h-[1px] bg-[#494433]/30 mx-auto mb-4 sm:mb-10"
                 />
 
                 <motion.p
                   variants={fadeUpVariant}
-                  className="text-[#5b5540] text-lg font-serif leading-relaxed mb-10 max-w-md mx-auto"
+                  className="text-[#5b5540] text-sm sm:text-base md:text-lg font-serif leading-relaxed mb-2 sm:mb-6 max-w-md mx-auto italic"
                 >
-                  May this year bring you immense joy, profound wisdom, and
-                  continuous success. We deeply value your presence and
-                  contributions to our journey.
+                  "May this year bring you immense joy, profound wisdom, and
+                  continuous success. We deeply value your visionary leadership and guidance."
                 </motion.p>
-
-                {/* <motion.button
-                  variants={fadeUpVariant}
-                  whileHover={{
-                    scale: 1.05,
-                    backgroundColor: "#494433",
-                    color: "#faf9f6",
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setIsOpen(false)}
-                  className="px-8 py-3 border border-[#494433] text-[#494433] transition-colors duration-300 font-serif tracking-widest text-sm uppercase relative z-20 bg-[#faf9f6]/50 backdrop-blur-sm"
-                >
-                  Enter Site
-                </motion.button> */}
               </motion.div>
             </div>
           </motion.div>
