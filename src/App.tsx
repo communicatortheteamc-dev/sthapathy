@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import BirthdayPopup from './components/BirthdayPopup';
+// import BirthdayPopup from './components/BirthdayPopup';
 import Home from './pages/Home';
 import About from './pages/About';
 import Objectives from './pages/Objectives';
@@ -25,7 +25,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
-        <BirthdayPopup />
+        {/* <BirthdayPopup /> */}
         <Header />
         <div className="h-20"></div> {/* Spacer for fixed header */}
         <main className="flex-1">
